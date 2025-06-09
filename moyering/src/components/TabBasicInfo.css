@@ -80,3 +80,82 @@
   padding: 30px;
   border-radius: 0 0 8px 8px;
 }
+.section-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+.form-section {
+  margin-bottom: 32px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form-group select {
+  padding: 8px 12px;
+  width: 220px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: white;
+}
+
+.input {
+  padding: 10px 12px;
+  width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.location-box {
+  margin-top: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  overflow: hidden;
+  max-width: 600px;
+}
+
+.location-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.location-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.location-label {
+  background: #f4f4f4;
+  font-weight: bold;
+  width: 100px;
+}
+
+.location-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+}
+
+.location-add-btn {
+  padding: 6px 12px;
+  border: 1px solid #f2a950;
+  background: white;
+  color: #f2a950;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.location-remove-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: #555;
+  cursor: pointer;
+}

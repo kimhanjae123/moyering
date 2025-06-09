@@ -3,22 +3,22 @@ import './TabBasicInfo.css';
 const TabBasicInfo = ({ data, onChange }) => {
   
 
-  return (
-    <div className="basic-info-container">
-      <h2>기본정보</h2>
+    return (
+    <div>
+      <h3 className="section-title">기본정보</h3>
 
       {/* 카테고리 */}
-      <div className="form-row">
-        <label>카테고리</label>
-        <div className="category-selectors">
-          <div>
-            <label>1차카테고리</label>
+      <div className="form-section">
+        <div className="label">카테고리</div>
+        <div className="info-grid">
+          <div className="form-group">
+            <div className="label">1차카테고리</div>
             <select>
               <option>1차 카테고리 선택</option>
             </select>
           </div>
-          <div>
-            <label>2차카테고리</label>
+          <div className="form-group">
+            <div className="label">2차카테고리</div>
             <select disabled>
               <option>2차카테고리 선택</option>
             </select>
@@ -26,36 +26,40 @@ const TabBasicInfo = ({ data, onChange }) => {
         </div>
       </div>
 
-      {/* 클래스 명 */}
-      <div className="form-row">
-        <label>클래스 명</label>
-        <input type="text" placeholder="클래스명을 입력해주세요." />
+      {/* 클래스명 */}
+      <div className="form-section">
+        <div className="label">클래스 명</div>
+        <input
+          type="text"
+          placeholder="클래스명을 입력해주세요."
+          className="input"
+        />
       </div>
 
-      {/* 장소 */}
-      <div className="form-row">
-        <label>장소</label>
-        <div>
-          <label className="required">*진행장소</label>
+      {/* 진행 장소 */}
+      <div className="form-section">
+        <div className="label">
+          장소 <span style={{ color: "red" }}>* 진행장소</span>
+        </div>
+
+        <div className="location-box">
           <table className="location-table">
-            <thead>
-              <tr>
-                <th></th>
-                <th>장소명</th>
-              </tr>
-            </thead>
             <tbody>
               <tr>
-                <td>주소</td>
-                <td>서울 강남구 논현로123길 4-1</td>
+                <td className="location-label">주소</td>
+                <td>서울 강남구 논현123길 4-1</td>
               </tr>
               <tr>
-                <td>좌표</td>
-                <td>위도 : 12.3456 경도 : 12.3456</td>
+                <td className="location-label">좌표</td>
+                <td>위도 : 12.3456&nbsp;&nbsp;&nbsp;경도 : 12.3456</td>
               </tr>
             </tbody>
           </table>
-          <button className="register-button">장소 등록</button>
+
+          <div className="location-footer">
+            <button className="location-add-btn">장소 등록</button>
+            <button className="location-remove-btn">X</button>
+          </div>
         </div>
       </div>
     </div>
