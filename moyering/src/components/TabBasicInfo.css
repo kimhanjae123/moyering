@@ -1,0 +1,82 @@
+.register-page {
+  padding: 20px;
+  background: #f4f4f4;
+  min-height: 100vh;
+}
+
+.class-info-box {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px 24px;
+  margin-bottom: 20px;
+}
+
+.class-info-box h3 {
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.info-grid {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.label {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 4px;
+}
+
+.status {
+  font-weight: bold;
+}
+
+.status.current {
+  color: white;
+  background-color: green;
+  padding: 4px 10px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  box-shadow: 0 0 8px rgba(0, 128, 0, 0.4);
+}
+
+.tab-menu {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  border-bottom: 1px solid #dcdcdc; /* hr과 유사한 전체 밑줄 */
+}
+
+.tab-item {
+  flex: 1;
+  text-align: center;
+  padding: 12px 0;
+  cursor: pointer;
+  font-weight: 500;
+  color: #555;
+  position: relative;
+}
+
+.tab-item.active {
+  color: #000;
+  font-weight: 600;
+}
+
+.tab-item.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px; /* 선이 겹치지 않도록 */
+  left: 0;
+  width: 100%;
+  height: 1px; /* ✅ hr과 같은 얇은 선 */
+  background-color: #000;
+}
+
+.tab-content {
+  background: white;
+  padding: 30px;
+  border-radius: 0 0 8px 8px;
+}
