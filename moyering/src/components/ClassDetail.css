@@ -1,0 +1,194 @@
+/* ClassDetail.css */
+.class-search-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.search-section,
+.date-section,
+.status-section {
+  margin-bottom: 20px;
+}
+
+.search-section label,
+.date-section label,
+.status-section label {
+  font-size: 1rem;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.search-input-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.search-input-container input {
+  width: 300px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-filter {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 120px;
+}
+
+.search-input-container button {
+  padding: 8px 16px;
+  border: none;
+  background-color: #ffbf00;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.search-input-container button:hover {
+  background-color: #e0a800;
+}
+
+.date-section .date-range {
+  display: flex;
+  gap: 10px;
+}
+
+.date-section input[type="date"] {
+  padding: 8px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.date-buttons button {
+  background-color: #ccc;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.date-buttons button:hover {
+  background-color: #e0a800;
+}
+
+.date-buttons .active {
+  background-color: #ffbf00;
+  color: white;
+}
+
+.checkbox-group {
+  display: flex;
+  gap: 20px;
+}
+
+.checkbox-group label {
+  font-size: 0.9rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-right: 5px;
+  /* 체크박스의 기본 배경 및 테두리 색상 초기화 */
+  background-color: white;
+  border: 1px solid #ccc;
+  width: 16px;
+  height: 16px;
+  appearance: none; /* 기본 브라우저 스타일을 제거 */
+  cursor: pointer;
+  position: relative;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* 체크박스를 클릭했을 때의 스타일 */
+.checkbox-group input[type="checkbox"]:checked {
+  background-color: #ffbf00; /* 원하는 색상 (ffbf00) */
+  border-color: #ffbf00;
+}
+
+/* 체크된 상태에서의 체크 표시 */
+.checkbox-group input[type="checkbox"]:checked::before {
+  content: '✔'; /* 체크 모양 */
+  color: white; /* 체크 모양을 흰색으로 설정 */
+  position: absolute;
+  top: 0;
+  left: 3px;
+  font-size: 12px;
+}
+
+/* 체크박스를 클릭했을 때의 상태 변화 (애니메이션 추가) */
+.checkbox-group input[type="checkbox"]:checked {
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* 체크박스에 마우스 호버 상태 */
+.checkbox-group input[type="checkbox"]:hover {
+  border-color: #ffbf00; /* 호버 시 테두리 색상 변화 */
+}
+
+/* 검색 결과 */
+.result-section {
+  margin-top: 30px;
+}
+
+.result-item {
+  display: flex;
+  border: 1px solid #ccc;
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  align-items: center;
+}
+
+.result-image img {
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
+  margin-right: 16px;
+}
+
+.result-info {
+  flex: 1;
+}
+
+.result-info h5 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.result-actions {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.result-actions button {
+  padding: 8px 16px;
+  border: none;
+  background-color: #ffbf00;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.result-actions button:hover {
+  background-color: #e0a800;
+}

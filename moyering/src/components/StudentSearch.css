@@ -1,0 +1,120 @@
+/* ClassSearch.css */
+.class-search-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.search-section {
+  margin-bottom: 20px;
+}
+
+.search-section label {
+  font-size: 1rem;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.search-input-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.search-input-container input {
+  width: 300px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-input-container button {
+  padding: 8px 16px;
+  border: none;
+  background-color: #ffbf00;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.search-input-container button:hover {
+  background-color: #e0a800;
+}
+
+.class-results {
+  margin-top: 30px;
+}
+
+h4 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.student-item {
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.student-info {
+  cursor: pointer;
+}
+
+.student-details {
+  display: flex;
+  gap: 20px;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.student-name {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.dropdown-classes {
+  background-color: #fafafa;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.class-item {
+  background-color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.class-info {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.attendance-button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.attendance-button:hover {
+  background-color: #218838;
+}
