@@ -1,3 +1,8 @@
-export default function TabTransaction(){
-    
-}
+import { useState, useEffect } from 'react';
+import './TabTransaction.css';
+
+const TabTransaction = ({ registerValidator }) => {
+ 
+};
+
+export default TabTransaction;

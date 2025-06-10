@@ -1,0 +1,99 @@
+/* TabExtraInfo.css */
+.class-info-box {
+  background: white;
+  padding: 16px 24px;
+  margin-bottom: 20px;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.form-section {
+  margin-bottom: 32px;
+}
+
+.file-label, .tags-label, .keywords-label, .coupon-label {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.file-input {
+  display: none; /* 기본 파일 input을 숨깁니다 */
+}
+
+.file-upload-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.file-upload-button {
+    width: 300px;
+  padding: 10px 12px;
+  background-color: #ffbf00;
+  color: white;
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.file-placeholder {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+.tags-input-container, .keywords-input-container, .coupon-input-container {
+  display: flex;
+  align-items: center;
+}
+
+.tags-input, .keywords-input, .coupon-input {
+  padding: 10px 12px;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.required-text-dot {
+  color: red;
+  font-weight: bold;
+  margin-right: 4px;
+}
+
+.form-section input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 3px rgba(0, 123, 255, 0.3);
+}
+
+.tags-input-btn, .keywords-input-btn, .coupon-input-btn {
+  padding: 8px 16px;
+  background-color: #ffbf00;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.tags-input-btn:hover, .keywords-input-btn:hover, .coupon-input-btn:hover {
+  background-color: #e69a00;
+}

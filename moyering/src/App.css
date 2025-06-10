@@ -66,3 +66,20 @@ header {
   overflow-y: auto;
   background-color: #fafafa;
 }
+
+.btn {
+  flex: 1;
+  padding: 8px 0;
+  background-color: white;
+  border: 2px solid #ffbf00;
+  color: #ffbf00;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.required-text-dot{
+  color: red;
+}
