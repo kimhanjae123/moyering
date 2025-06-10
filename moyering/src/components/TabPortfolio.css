@@ -1,4 +1,4 @@
-/* TabTransaction.css */
+/* TabPortfolio.css */
 .class-info-box {
   background: white;
   padding: 16px 24px;
@@ -27,7 +27,7 @@
   margin-bottom: 32px;
 }
 
-.warning-info-label, .refund-policy-label {
+.portfolio-label {
   font-size: 0.9rem;
   color: #777;
   margin-bottom: 8px;
@@ -40,32 +40,38 @@
   margin-right: 4px;
 }
 
-textarea {
-  width: 100%;
+.file-upload-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.file-upload-button {
   padding: 10px 12px;
-  border: 1px solid #ccc;
+  background-color: #ffbf00;
+  color: white;
+  text-align: center;
   border-radius: 4px;
-  height: 150px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.file-placeholder {
   font-size: 0.9rem;
-  margin-bottom: 20px;
+  color: #aaa;
+  margin-bottom: 10px;
 }
 
-textarea:focus {
-  border-color: #007bff;
-  box-shadow: 0 0 3px rgba(0, 123, 255, 0.3);
+.file-input {
+  display: none; /* 기본 파일 input을 숨깁니다 */
 }
 
-.warning{
-    color: red;
-    margin-top: -20px;
+.portfolio-info-text {
+  font-size: 0.9rem;
+  color: red;
+  margin-top: 10px;
+  text-align: left;
 }
 
-.refund-policy-textarea{
-    height: 600px;
-    width: 600px;
-}
-
-.warning-info-textarea{
-    height: 600px;
-    width: 800px;
+.file-upload-button:hover {
+  background-color: #e0a800;
 }
