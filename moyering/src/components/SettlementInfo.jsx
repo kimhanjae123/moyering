@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './SettlementInfo.css';
+import ProfileFooter from './ProfileFooter';
 
 const SettlementInfo = () => {
   const [bank, setBank] = useState('');
@@ -19,7 +20,7 @@ const SettlementInfo = () => {
 
       <div className="settlement-row">
         <label>수수료</label>
-        <span>19.8</span>
+        <span>10%</span>
       </div>
 
       <div className="settlement-row">
@@ -55,6 +56,7 @@ const SettlementInfo = () => {
           </p>
         </div>
       </div>
+      <ProfileFooter/>
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './HostProfile.css';
+import ProfileFooter from './ProfileFooter';
 
 export default function ProfileManagement() {
 
@@ -12,6 +13,7 @@ export default function ProfileManagement() {
   };
 
   return (
+    <>
     <div className="profile-container">
       <h2>프로필 관리</h2>
       <form className="profile-form">
@@ -54,12 +56,20 @@ export default function ProfileManagement() {
 
         <div className="form-group">
           <label>소개 (선택)</label>
-          <textarea value={text} onChange={handleChange} maxlength="500" 
-          placeholder="간단한 소개와 약력을 입력하세요." maxLength={500}></textarea>
+          <div className="textarea-wrapper">
+            <textarea
+              value={text}
+              onChange={handleChange}
+              placeholder="간단한 소개와 약력을 입력하세요."
+              maxLength={500}
+            />
           <p className="char-count">{text.length}/500</p>
-          <p className="desc">클래스 회원에게 보여지는 소개입니다.</p>
+          <p className="text-area-desc">클래스 회원에게 보여지는 소개입니다.</p>
+          </div>
         </div>
       </form>
     </div>
+      <ProfileFooter/>
+    </>
   );
 }

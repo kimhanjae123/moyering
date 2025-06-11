@@ -16,6 +16,7 @@ const TabDescription = () => {
 
     return (
         <div className="class-info-box">
+            <h3 className="section-title">클래스 설명</h3>
             <div className="image-upload-container">
                 <h3>이미지 업로드</h3>
                 <div className="image-box-container">
@@ -48,7 +49,7 @@ const TabDescription = () => {
                 </p>
             </div>
             <hr/>
-            <h3 className="section-title">클래스 설명</h3>
+            
             <div className="form-section">
                 <label className="description-label">
                     <span className="required-text-dot">*</span>클래스 상세설명

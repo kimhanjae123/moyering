@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import './ClassDetail.css';
+import './ClassList.css';
+import { useNavigate } from 'react-router-dom';
 
-const ClassDetail = () => {
+const ClassList = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
@@ -88,6 +89,17 @@ const ClassDetail = () => {
       ...prevState,
       [name]: checked,
     }));
+  };
+
+  const navigate = useNavigate();
+  const [dropdownIndex, setDropdownIndex] = useState(null);
+
+  const toggleDropdown = (index) => {
+    setDropdownIndex(dropdownIndex === index ? null : index);
+  };
+
+  const handleNavigate = (path) => {
+    navigate(path);
   };
 
   return (
@@ -197,8 +209,14 @@ const ClassDetail = () => {
                 <p><strong>상태:</strong> {result.status}</p>
               </div>
               <div className="result-actions">
-                <button>수정</button>
-                <button>더 보기</button>
+                <button onClick={() => toggleDropdown(index)}>더 보기</button>
+                {dropdownIndex === index && (
+                  <div className="dropdown-menu">
+                    <button onClick={() => handleNavigate('/inquiry')}>문의 관리</button>
+                    <button onClick={() => handleNavigate('/classReview')}>리뷰 관리</button>
+                    <button onClick={() => handleNavigate('/detail')}>상품 상세</button>
+                  </div>
+                )}
               </div>
             </div>
           ))}
@@ -209,4 +227,4 @@ const ClassDetail = () => {
   );
 };
 
-export default ClassDetail;
+export default ClassList;

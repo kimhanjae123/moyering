@@ -1,0 +1,149 @@
+.class-settlement-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: 'Pretendard', sans-serif;
+  background-color: transparent;
+}
+
+.settlement-search {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.settlement-search h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.search-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-row label {
+  font-weight: bold;
+}
+
+.search-row input[type="date"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.quick-buttons {
+  display: flex;
+  gap: 6px;
+}
+
+.quick-buttons button {
+  background-color: #ccc;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.quick-buttons button:hover {
+  background-color: #e0a800
+}
+
+.quick-buttons .active {
+  background-color: #ffa500;
+  color: white;
+  
+}
+
+.search-btn {
+    margin-top: 10px;
+  padding: 8px 16px;
+  background: #ffa500;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.settlement-result {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.settlement-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.settlement-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.settlement-table th {
+  background: #ffe08a;
+  padding: 12px;
+  border: 1px solid #ddd;
+  font-size: 0.95rem;
+}
+
+.settlement-table td {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #eee;
+  font-size: 0.9rem;
+}
+
+.settle-btn,
+.cancel-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.settle-btn {
+  background-color: #ffa500;
+  color: white;
+}
+
+.cancel-btn {
+  background-color: #eee;
+  color: #444;
+}
+
+.cancel-btn:disabled {
+  cursor: default;
+  background-color: #eee !important;
+  color: #999 !important;
+  opacity: 1; /* 흐리게 보이지 않게 */
+  pointer-events: none; /* 마우스 이벤트 차단 */
+  transform: none !important;
+}
+
+.cancel-btn:disabled:hover {
+  background-color: #eee !important; /* 호버 시 색 유지 */
+}
+
+.info-msg {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.info-msg strong {
+  color: red;
+}

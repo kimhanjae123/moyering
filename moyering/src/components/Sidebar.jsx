@@ -17,11 +17,11 @@ export default function Sidebar() {
   return (
     <aside className="sidebar">
       <div className="logo" onClick={() => navigate('/')}>
-        <img src="/logo.png" alt="로고" className="logo-img" />
+        <img src="/hostlogo.png" alt="로고" className="logo-img" />
       </div>
       <div className="button-row">
         <button className="btn" onClick={() => handleNavigation('/register')}>클래스등록</button>
-        <button className="btn" onClick={() => handleNavigation('/classDetail')}>클래스목록</button>
+        <button className="btn" onClick={() => handleNavigation('/classList')}>클래스목록</button>
       </div>
       <nav>
         <ul>
@@ -50,11 +50,12 @@ export default function Sidebar() {
             </svg>
           </li>
           <ul className={`submenu ${openSection === 'class' ? 'open' : ''}`}>
-            <li onClick={() => handleNavigation('/classDetail')}>클래스목록</li>
+            <li onClick={() => handleNavigation('/classList')}>클래스목록</li>
             <li onClick={() => handleNavigation('/students')}>수강생관리</li>
             <li onClick={() => handleNavigation('/inquiry')}>문의관리</li>
+            <li onClick={() => handleNavigation('/classReview')}>리뷰관리</li>
             <li onClick={() => handleNavigation('/calendar')}>일정캘린더</li>
-            <li onClick={() => handleNavigation('/coupons')}>쿠폰관리</li>
+            {/* <li onClick={() => handleNavigation('/coupons')}>쿠폰관리</li> */}
           </ul>
 
           <li onClick={() => toggleSection('settlement')} className="menu-title">정산관리
@@ -68,7 +69,7 @@ export default function Sidebar() {
             </svg>
           </li>
           <ul className={`submenu ${openSection === 'settlement' ? 'open' : ''}`}>
-            <li onClick={() => handleNavigation('/settlement-account')}>정산계좌</li>
+            <li onClick={() => handleNavigation('/classSettlement')}>정산계좌</li>
           </ul>
         </ul>
       </nav>

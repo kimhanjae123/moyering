@@ -1,8 +1,12 @@
 .profile-container {
   background: white;
-  padding: 40px;
+  padding: 24px;
+  padding-bottom: 120px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: sans-serif;
   animation: fadeIn 0.4s ease-in-out;
 }
 
@@ -48,13 +52,50 @@ input[type="email"]{
   font-size: 0.95rem;
 }
 
-textarea {
+.textarea-wrapper {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.textarea-wrapper textarea {
+  width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 0.95rem;
-  height: 120px;         
-  resize: none;          
+  height: 120px;
+  resize: none;
+  box-sizing: border-box;
+}
+
+.textarea-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 4px;
+}
+
+.char-count {
+  font-size: 0.75rem;
+  color: #999;
+  text-align: right;
+  margin-top: -15px;
+}
+
+.desc {
+  font-size: 0.85rem;
+  color: #666;
+  text-align: left;
+  line-height: 1.4;
+}
+.text-area-desc{
+  margin-top: -30px;
+  font-size: 0.85rem;
+  color: #666;
+  text-align: left;
+  line-height: 1.4;
 }
 
 .inline-input {
@@ -76,18 +117,6 @@ button {
   color: white;
 }
 
-.desc {
-  font-size: 0.85rem;
-  color: #666;
-  margin-top: 6px;
-  line-height: 1.4;
-}
-
-.char-count {
-  font-size: 0.75rem;
-  text-align: right;
-  color: #999;
-}
 
 @keyframes fadeIn {
   from {

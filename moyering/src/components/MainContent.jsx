@@ -3,14 +3,14 @@ import './MainContent.css';
 
 export default function MainContent() {
   const stats = [
-    { label: '전체 판매금액', value: '0' },
-    { label: '이번달 판매금액', value: '0' },
-    { label: '이번달 진행 클래스', value: '0' },
-    { label: '전체 결제 건수', value: '0' },
-    { label: '이번달 취소 건수', value: '0' },
-    { label: '전체 후기수', value: '0' },
-    { label: '평균 평점', value: '0.00' },
-    { label: '문의 응답률', value: '0.00%' },
+    { label: '전체 판매금액', value: '100,000,000' },
+    { label: '이번달 판매금액', value: '250,000' },
+    { label: '이번달 진행 클래스', value: '5' },
+    { label: '전체 결제 건수', value: '20' },
+    { label: '이번달 취소 건수', value: '1' },
+    { label: '전체 후기수', value: '34' },
+    { label: '평균 평점', value: '4.41' },
+    { label: '문의 응답률', value: '91.12%' },
   ];
 
   return (

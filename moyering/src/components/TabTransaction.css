@@ -48,6 +48,7 @@ textarea {
   height: 150px;
   font-size: 0.9rem;
   margin-bottom: 20px;
+  resize: none;
 }
 
 textarea:focus {

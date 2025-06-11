@@ -1,0 +1,103 @@
+.description-tab-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px;
+  background: #fff;
+  border-radius: 8px;
+  box-sizing: border-box;
+animation: fadeIn 0.4s ease-in-out;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  border-bottom: 2px solid #000;
+  display: inline-block;
+  margin-bottom: 24px;
+}
+
+/* — 대표 이미지 영역 — */
+.image-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.image-label {
+  width: 120px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: #333;
+}
+.image-list {
+  display: flex;
+  gap: 12px;
+}
+.image-list img {
+  width: 250px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* 구분선 */
+hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 24px 0;
+}
+
+/* — 상세 설명 영역 — */
+.detail-section {
+  display: flex;
+  align-items: flex-start;
+}
+.detail-label {
+  width: 120px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: #333;
+  margin-top: 4px;
+}
+.detail-content {
+  flex: 1;
+  padding: 16px;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  background: #fafafa;
+}
+
+.detail-content p {
+  margin-bottom: 12px;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+.detail-content ul,
+.detail-content ol {
+  margin: 12px 0;
+  padding-left: 20px;
+}
+.detail-content ul li,
+.detail-content ol li {
+  margin-bottom: 8px;
+}
+.detail-content strong {
+  font-weight: 600;
+}
+.hashtags {
+  margin-top: 16px;
+  color: #666;
+  font-size: 0.9rem;
+}

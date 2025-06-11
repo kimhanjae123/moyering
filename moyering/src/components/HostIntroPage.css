@@ -1,0 +1,103 @@
+.host-intro-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background: #fff;
+  color: #222;
+  font-family: 'Pretendard', sans-serif;
+}
+
+.intro-section h2,
+.reason-section h2 {
+  font-size: 1.4rem;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.intro-section p,
+.reason-section p {
+  font-size: 0.95rem;
+  text-align: center;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.stats-box {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-bottom: 60px;
+}
+
+.stats-box > div {
+  text-align: center;
+}
+
+.stats-box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 4px;
+}
+
+.stats-box p {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.stats-box a {
+  color: #444;
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 40px 0;
+}
+
+.reason-section {
+  text-align: center;
+}
+
+.reason-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.reason-item {
+  text-align: left;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.reason-item h3 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.reason-item h3 span {
+  color: #ffbf00;
+  font-weight: bold;
+  margin-right: 4px;
+}
+
+.reason-item p {
+  color: #555;
+  font-size: 0.85rem;
+}
+
+/* 모바일 대응 */
+@media (max-width: 768px) {
+  .reason-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-box {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
