@@ -50,11 +50,22 @@ nav ul {
 }
 
 .menu-title {
-  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   font-size: 14px;
   font-weight: bold;
-  margin: 15px 0;
-  transition: background 0.1s;
+  margin: 25px 0;
+  cursor: pointer;
+}
+
+.arrow-icon {
+  transition: transform 0.3s ease;
+  transform: rotate(); /* 오른쪽 방향 기본 */
+}
+
+.arrow-icon.open {
+  transform: rotate(90deg); /* 아래 방향으로 회전 */
 }
 
 .submenu {

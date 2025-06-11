@@ -11,7 +11,7 @@ const ClassDetail = () => {
     completed: false,
   });
 
-   // 검색 결과 데이터 관리
+  // 검색 결과 데이터 관리
   const [searchResults, setSearchResults] = useState([
     {
       className: '클래스 명',
@@ -48,7 +48,7 @@ const ClassDetail = () => {
     setDateFilter('');
   };
 
-   const handleDateFilterClick = (months) => {
+  const handleDateFilterClick = (months) => {
     const today = new Date();
     let newStartDate = new Date(today);
     let newEndDate = new Date(today);
@@ -91,116 +91,121 @@ const ClassDetail = () => {
   };
 
   return (
-    <div className="class-search-container">
-      <h3>클래스 조회</h3>
+    <>
+      <div className="class-search-container">
+        <h3>클래스 조회</h3>
 
-      {/* 검색어 입력 */}
-      <div className="search-section">
-        <label>검색어</label>
-        <div className="search-input-container">
-          <input
-            type="text"
-            placeholder="클래스명을 입력하세요."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-          />
-          <select className="search-filter">
-            <option value="">필터</option>
-            <option value="name">이름</option>
-            <option value="category">카테고리</option>
-          </select>
-          <button onClick={handleSearch}>검색</button>
-          <button onClick={handleReset}>초기화</button>
+        {/* 검색어 입력 */}
+        <div className="search-section">
+          <label>검색어</label>
+          <div className="search-input-container">
+            <input
+              type="text"
+              placeholder="클래스명을 입력하세요."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+            <select className="search-filter">
+              <option value="">필터</option>
+              <option value="name">이름</option>
+              <option value="category">카테고리</option>
+            </select>
+            <button onClick={handleSearch}>검색</button>
+            <button onClick={handleReset}>초기화</button>
+          </div>
+        </div>
+
+        {/* 조회기간 필터 */}
+        <div className="date-section">
+          <label>조회기간</label>
+          <div className="date-range">
+            <input
+              type="date"
+              value={startDate}
+              onChange={(e) => setStartDate(e.target.value)}
+            />
+            ~
+            <input
+              type="date"
+              value={endDate}
+              onChange={(e) => setEndDate(e.target.value)}
+            />
+          </div>
+          <div className="date-buttons">
+            {['오늘', '1개월', '3개월', '6개월', '1년', '전체'].map((label) => (
+              <button
+                key={label}
+                onClick={() => handleDateFilterClick(label)}
+                className={dateFilter === label ? 'active' : ''}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* 클래스 상태 필터 */}
+        <div className="status-section">
+          <label>클래스 상태</label>
+          <div className="checkbox-group">
+            <label>
+              <input
+                type="checkbox"
+                name="ongoing"
+                checked={classStatus.ongoing}
+                onChange={handleClassStatusChange}
+              />
+              등록중
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                name="upcoming"
+                checked={classStatus.upcoming}
+                onChange={handleClassStatusChange}
+              />
+              오픈대기
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                name="completed"
+                checked={classStatus.completed}
+                onChange={handleClassStatusChange}
+              />
+              오픈
+            </label>
+          </div>
         </div>
       </div>
-
-      {/* 조회기간 필터 */}
-      <div className="date-section">
-        <label>조회기간</label>
-        <div className="date-range">
-          <input
-            type="date"
-            value={startDate}
-            onChange={(e) => setStartDate(e.target.value)}
-          />
-          ~
-          <input
-            type="date"
-            value={endDate}
-            onChange={(e) => setEndDate(e.target.value)}
-          />
-        </div>
-        <div className="date-buttons">
-          {['오늘', '1개월', '3개월', '6개월', '1년', '전체'].map((label) => (
-            <button
-              key={label}
-              onClick={() => handleDateFilterClick(label)}
-              className={dateFilter === label ? 'active' : ''}
-            >
-              {label}
-            </button>
+      <div className="class-result-container">
+        {/* 검색 결과 테이블 */}
+        <div className="result-section">
+          <h4>검색 결과: {searchResults.length} 건</h4>
+          {searchResults.map((result, index) => (
+            <div key={index} className="result-item">
+              <div className="result-image">
+                <img
+                  src={result.imageUrl}
+                  alt={result.className}
+                />
+              </div>
+              <div className="result-info">
+                <h5>{result.className}</h5>
+                <p><strong>클래스 종료일:</strong> {result.classEndDate}</p>
+                <p><strong>카테고리:</strong> {result.category}</p>
+                <p><strong>상태:</strong> {result.status}</p>
+              </div>
+              <div className="result-actions">
+                <button>수정</button>
+                <button>더 보기</button>
+              </div>
+            </div>
           ))}
         </div>
       </div>
 
-      {/* 클래스 상태 필터 */}
-      <div className="status-section">
-        <label>클래스 상태</label>
-        <div className="checkbox-group">
-          <label>
-            <input
-              type="checkbox"
-              name="ongoing"
-              checked={classStatus.ongoing}
-              onChange={handleClassStatusChange}
-            />
-            등록중
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              name="upcoming"
-              checked={classStatus.upcoming}
-              onChange={handleClassStatusChange}
-            />
-            오픈대기
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              name="completed"
-              checked={classStatus.completed}
-              onChange={handleClassStatusChange}
-            />
-            오픈
-          </label>
-        </div>
-      </div>
-    {/* 검색 결과 테이블 */}
-      <div className="result-section">
-        <h4>검색 결과: {searchResults.length} 건</h4>
-        {searchResults.map((result, index) => (
-          <div key={index} className="result-item">
-            <div className="result-image">
-              <img
-                src={result.imageUrl}
-                alt={result.className}
-              />
-            </div>
-            <div className="result-info">
-              <h5>{result.className}</h5>
-              <p><strong>클래스 종료일:</strong> {result.classEndDate}</p>
-              <p><strong>카테고리:</strong> {result.category}</p>
-              <p><strong>상태:</strong> {result.status}</p>
-            </div>
-            <div className="result-actions">
-              <button>수정</button>
-              <button>더 보기</button>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
+    </>
   );
 };
 

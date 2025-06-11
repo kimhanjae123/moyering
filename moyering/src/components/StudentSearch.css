@@ -9,6 +9,16 @@
   margin: 0 auto;
 }
 
+.class-result-container{
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 900px;
+  margin: 20px auto;
+}
+
 h3 {
   font-size: 1.5rem;
   font-weight: bold;

@@ -7,6 +7,30 @@
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.class-result-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 900px;
+  margin: 20px auto;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 h3 {
@@ -111,7 +135,8 @@ h3 {
   border: 1px solid #ccc;
   width: 16px;
   height: 16px;
-  appearance: none; /* 기본 브라우저 스타일을 제거 */
+  appearance: none;
+  /* 기본 브라우저 스타일을 제거 */
   cursor: pointer;
   position: relative;
   border-radius: 4px;
@@ -120,14 +145,17 @@ h3 {
 
 /* 체크박스를 클릭했을 때의 스타일 */
 .checkbox-group input[type="checkbox"]:checked {
-  background-color: #ffbf00; /* 원하는 색상 (ffbf00) */
+  background-color: #ffbf00;
+  /* 원하는 색상 (ffbf00) */
   border-color: #ffbf00;
 }
 
 /* 체크된 상태에서의 체크 표시 */
 .checkbox-group input[type="checkbox"]:checked::before {
-  content: '✔'; /* 체크 모양 */
-  color: white; /* 체크 모양을 흰색으로 설정 */
+  content: '✔';
+  /* 체크 모양 */
+  color: white;
+  /* 체크 모양을 흰색으로 설정 */
   position: absolute;
   top: 0;
   left: 3px;
@@ -141,7 +169,8 @@ h3 {
 
 /* 체크박스에 마우스 호버 상태 */
 .checkbox-group input[type="checkbox"]:hover {
-  border-color: #ffbf00; /* 호버 시 테두리 색상 변화 */
+  border-color: #ffbf00;
+  /* 호버 시 테두리 색상 변화 */
 }
 
 /* 검색 결과 */

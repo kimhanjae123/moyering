@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './StudentSearch.css';
 
 const StudentSearch = () => {
- const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState('');
   const [students, setStudents] = useState([
     {
       id: 1,
@@ -59,56 +59,59 @@ const StudentSearch = () => {
   };
 
   return (
-    <div className="class-search-container">
-      <h3>수강생 조회</h3>
+    <>
+      <div className="class-search-container">
+        <h3>수강생 조회</h3>
 
-      <div className="search-section">
-        <label>검색어</label>
-        <div className="search-input-container">
-          <input
-            type="text"
-            placeholder="클래스명을 입력하세요."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-          />
-          <button onClick={handleSearch}>검색</button>
-          <button onClick={handleReset}>초기화</button>
+        <div className="search-section">
+          <label>검색어</label>
+          <div className="search-input-container">
+            <input
+              type="text"
+              placeholder="클래스명을 입력하세요."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+            <button onClick={handleSearch}>검색</button>
+            <button onClick={handleReset}>초기화</button>
+          </div>
         </div>
       </div>
-
-      <div className="class-results">
-        <h4>검색 결과 : {students.length}건</h4>
-        {students.map((student) => (
-          <div key={student.id} className="student-item">
-            {/* 회원 정보 한 줄로 나열 */}
-            <div className="student-info" onClick={() => handleStudentClick(student)}>
-              <div className="student-details">
-                <span className="student-name">{student.name}</span>
-                <span>전화번호: {student.phone}</span>
-                <span>이메일: {student.email}</span>
-                <span>내 강의 수: {student.classes.length}</span>
+      <div className="class-result-container">
+        <div className="class-results">
+          <h4>검색 결과 : {students.length}건</h4>
+          {students.map((student) => (
+            <div key={student.id} className="student-item">
+              {/* 회원 정보 한 줄로 나열 */}
+              <div className="student-info" onClick={() => handleStudentClick(student)}>
+                <div className="student-details">
+                  <span className="student-name">{student.name}</span>
+                  <span>전화번호: {student.phone}</span>
+                  <span>이메일: {student.email}</span>
+                  <span>내 강의 수: {student.classes.length}</span>
+                </div>
               </div>
-            </div>
 
-            {/* 드롭다운으로 수강중인 클래스 목록 */}
-            {selectedStudent === student.id && (
-              <div className="dropdown-classes">
-                {student.classes.map((classItem, index) => (
-                  <div key={index} className="class-item">
-                    <div className="class-info">
-                      <p>{classItem.className}</p>
-                      <p>{classItem.classTime}</p>
-                      <p>{classItem.status}</p>
+              {/* 드롭다운으로 수강중인 클래스 목록 */}
+              {selectedStudent === student.id && (
+                <div className="dropdown-classes">
+                  {student.classes.map((classItem, index) => (
+                    <div key={index} className="class-item">
+                      <div className="class-info">
+                        <p>{classItem.className}</p>
+                        <p>{classItem.classTime}</p>
+                        <p>{classItem.status}</p>
+                      </div>
+                      <button className="attendance-button">출석 체크</button>
                     </div>
-                    <button className="attendance-button">출석 체크</button>
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
-        ))}
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
